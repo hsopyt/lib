@@ -12,14 +12,7 @@ import json
 import threading
 from concurrent.futures import ThreadPoolExecutor
 s = requests.Session()
-i=requests.get('https://raw.githubusercontent.com/hsopyt/lib/refs/heads/main/ids.txt').text
-if ('^')in i :pass
-else:exit('قام المستخدم بل ايقاف ')
 iid=input('Id ')
-if iid in i:
-	pass
-else:
-	exit('انت غير مشترك')
 tok=input('Token : ')
 #========#
 s.post(f"https://api.telegram.org/bot{tok}/sendMessage", data={"chat_id": iid, "text": "Hi!"})
